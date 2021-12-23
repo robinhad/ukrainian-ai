@@ -9,6 +9,13 @@ It's a project with an aim to demonstrate current state-of-the-art speech techno
 - [ ] [GlowTTS, trained on M-AILABS dataset](https://github.com/robinhad/ukrainian-tts).
 - [ ] Conversational pipeline (TBD)
 
+# Features
+
+- [ ] Ability to change backends
+- [ ] Support for Google Text-to-Speech/Speech-to-Text
+- [ ] Echo backend (speaks recognized phrase)
+- [ ] Other models
+
 # How to setup:
 
 TBD
