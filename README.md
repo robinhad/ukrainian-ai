@@ -1,4 +1,14 @@
-# Ukrainian-speaking conversation AI
+---
+title: "Ukrainian AI"
+emoji: 🇺🇦
+colorFrom: blue
+colorTo: yellow
+sdk: gradio
+app_file: app.py
+pinned: false
+---
+
+# Ukrainian-speaking conversational AI
 This is a pet project with aim to provide an end-to-end voice chatbot with ability to listen, speak and make a conversation in Ukrainian.
 
 It's a project with an aim to demonstrate current state-of-the-art speech technologies for Ukrainian language.
