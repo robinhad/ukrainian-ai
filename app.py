@@ -29,11 +29,13 @@ config_path = "config.json"
 download(model_link, model_path)
 download(config_link, config_path)
 
-p = pipeline("automatic-speech-recognition", "Yehor/wav2vec2-xls-r-300m-uk-with-wiki-lm")
+p = pipeline("automatic-speech-recognition", "Yehor/wav2vec2-xls-r-300m-uk-with-small-lm")
 
 synthesizer = Synthesizer(
     model_path, config_path, None, None, None,
 )
+
+badge = "https://visitor-badge-reloaded.herokuapp.com/badge?page_id=robinhad.ukrainian-ai"
 
 def transcribe(audio):
     text = p(audio)["text"]
@@ -46,7 +48,8 @@ def transcribe(audio):
 gr.Interface(
     fn=transcribe, 
     inputs=gr.inputs.Audio(source="microphone", type="filepath"), 
-    outputs=gr.outputs.Audio(label="Output")).launch()
+    outputs=gr.outputs.Audio(label="Output"),
+    article=f"<center><img src=\"{badge}\" alt=\"visitors badge\"/></center>",).launch()
 
 def chat(message, history):
     history = history or []
