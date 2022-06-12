@@ -43,12 +43,12 @@ def transcribe(audio):
         with torch.no_grad():
             wavs = synthesizer.tts(text)
             synthesizer.save_wav(wavs, fp)
-        return fp.name
+        return text, fp.name
 
 gr.Interface(
     fn=transcribe, 
     inputs=gr.inputs.Audio(source="microphone", type="filepath"), 
-    outputs=gr.outputs.Audio(label="Output"),
+    outputs=[gr.outputs.Textbox(label="Recognized text"),gr.outputs.Audio(label="Output")],
     article=f"<center><img src=\"{badge}\" alt=\"visitors badge\"/></center>",).launch()
 
 def chat(message, history):
