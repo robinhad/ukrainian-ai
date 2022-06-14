@@ -33,7 +33,7 @@ p = pipeline(
 )
 
 conv: ConversationalPipeline = pipeline(
-    "conversational", "robinhad/gpt2-uk-conversational", use_auth_token=True
+    "conversational", "robinhad/gpt2-uk-conversational"
 )
 
 synthesizer = Synthesizer(
