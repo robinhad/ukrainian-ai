@@ -4,3 +4,4 @@ TTS==0.6.2
 torch
 pyctcdecode
 https://github.com/kpu/kenlm/archive/master.zip
+sentencepiece==0.1.96

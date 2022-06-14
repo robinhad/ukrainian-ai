@@ -13,19 +13,17 @@ This is a pet project with aim to provide an end-to-end voice chatbot with abili
 
 It's a project with an aim to demonstrate current state-of-the-art speech technologies for Ukrainian language.
 
+Link to speaking demo: [https://huggingface.co/spaces/robinhad/ukrainian-ai](https://huggingface.co/spaces/robinhad/ukrainian-ai)  
+Link to text demo: [https://huggingface.co/robinhad/gpt2-uk-conversational](https://huggingface.co/robinhad/gpt2-uk-conversational)
 # Technologies used:
 
-- [ ] [Wav2Vec2 XLS-R 300M fine-tuned to Ukrainian language. WER: `31.56%`](https://huggingface.co/robinhad/wav2vec2-xls-r-300m-uk) for speech recognition.
-- [ ] [GlowTTS, trained on M-AILABS dataset](https://github.com/robinhad/ukrainian-tts).
-- [ ] Conversational pipeline (TBD)
+- [Wav2Vec2 XLS-R 300M fine-tuned to Ukrainian language](https://huggingface.co/Yehor/wav2vec2-xls-r-300m-uk-with-small-lm) for speech recognition.
+- [Ukrainian VITS TTS](https://github.com/robinhad/ukrainian-tts) for text-to-speech generation.
+- Conversational pipeline (this repository)
 
-# Features
-
-- [ ] Ability to change backends
-- [ ] Support for Google Text-to-Speech/Speech-to-Text
-- [ ] Echo backend (speaks recognized phrase)
-- [ ] Other models
+TODO: training scripts for conversational pipeline
 
 # How to setup:
 
-TBD
+1. `pip install -r requirements.txt`
+2. `python app.py`
