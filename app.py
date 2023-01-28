@@ -49,6 +49,9 @@ def transcribe(audio, selected_voice, history):
         _, output_text = tts.tts(response, selected_voice, Stress.Dictionary.value, fp)
         return text, fp.name, history, history
 
+with open("README.md") as file:
+    article = file.read()
+    article = article[article.find("---\n", 4) + 5 : :]
 
 iface = gr.Interface(
     fn=transcribe,
@@ -69,7 +72,6 @@ iface = gr.Interface(
     description="""Це альфа-версія end-to-end розмовного бота, з яким можна поспілкуватися голосом.  
     Перейдіть сюди для доступу до текстової версії: [https://huggingface.co/robinhad/gpt2-uk-conversational](https://huggingface.co/robinhad/gpt2-uk-conversational)  
     """,
-    article=f"""Розпізнавання української: [https://huggingface.co/robinhad/wav2vec2-xls-r-300m-uk](https://huggingface.co/robinhad/wav2vec2-xls-r-300m-uk)  
-    Синтез української: [https://huggingface.co/spaces/robinhad/ukrainian-tts](https://huggingface.co/spaces/robinhad/ukrainian-tts)""",
+    article=article,
 )
 iface.launch()
