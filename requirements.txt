@@ -1,7 +1,7 @@
-gradio
-transformers==4.19.4
-TTS==0.6.2
-torch
-pyctcdecode
-https://github.com/kpu/kenlm/archive/master.zip
-sentencepiece==0.1.96
+gradio==3.16
+transformers==4.26
+git+https://github.com/robinhad/ukrainian-tts.git@d3459a5e8a78dd95bfd1b43a4a659637a12a61d7
+# this would be needed if model would have an LM
+#pyctcdecode
+#https://github.com/kpu/kenlm/archive/master.zip
+#sentencepiece==0.1.96

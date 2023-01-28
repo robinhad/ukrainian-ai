@@ -4,6 +4,8 @@ emoji: 🇺🇦
 colorFrom: blue
 colorTo: yellow
 sdk: gradio
+sdk_version : 3.16
+python_version: 3.10
 app_file: app.py
 pinned: false
 ---
@@ -17,7 +19,7 @@ Link to speaking demo: [https://huggingface.co/spaces/robinhad/ukrainian-ai](htt
 Link to text demo: [https://huggingface.co/robinhad/gpt2-uk-conversational](https://huggingface.co/robinhad/gpt2-uk-conversational)
 # Technologies used:
 
-- [Wav2Vec2 XLS-R 300M fine-tuned to Ukrainian language](https://huggingface.co/Yehor/wav2vec2-xls-r-300m-uk-with-small-lm) for speech recognition.
+- [Wav2Vec2 XLS-R 300M fine-tuned to Ukrainian language](https://huggingface.co/robinhad/wav2vec2-xls-r-300m-uk) for speech recognition.
 - [Ukrainian VITS TTS](https://github.com/robinhad/ukrainian-tts) for text-to-speech generation.
 - Conversational pipeline (this repository)
 
