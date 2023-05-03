@@ -1,5 +1,6 @@
 gradio==3.16
 transformers==4.26
+typeguard==2.13.3
 git+https://github.com/robinhad/ukrainian-tts.git@d3459a5e8a78dd95bfd1b43a4a659637a12a61d7
 # this would be needed if model would have an LM
 #pyctcdecode
