@@ -40,7 +40,7 @@ def transcribe(audio, selected_voice, history):
     past_user_inputs = [i[0] for i in history]
     generated_responses = [i[1] for i in history]
     next_output_length = len(tokenizer.encode("".join(generated_responses + past_user_inputs))) + 60
-    response = conv(Conversation(text, past_user_inputs, generated_responses), max_length=next_output_length, penalty_alpha=0.6, top_k=4)
+    response = conv(Conversation(text, past_user_inputs, generated_responses), max_length=next_output_length)
     response = response.generated_responses[-1]
     history.append((text, response))
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as fp:
