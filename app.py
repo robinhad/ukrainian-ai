@@ -6,7 +6,7 @@ from ukrainian_tts.tts import TTS, Voices, Stress
 from enum import Enum
 
 
-tts = TTS(device="cpu") # can try gpu, mps
+tts = TTS() # can try device=cpu|gpu|mps
 
 p = pipeline(
     "automatic-speech-recognition", "robinhad/wav2vec2-xls-r-300m-uk"
@@ -19,19 +19,17 @@ conv: ConversationalPipeline = pipeline(
 )
 
 class VoiceOption(Enum):
-    Olena = "Олена (жіночий) 👩"
+    Tetiana = "Тетяна (жіночий) 👩"
     Mykyta = "Микита (чоловічий) 👨"
     Lada = "Лада (жіночий) 👩"
     Dmytro = "Дмитро (чоловічий) 👨"
-    Olga = "Ольга (жіночий) 👩"
 
 
 voice_mapping = {
-    VoiceOption.Olena.value: Voices.Olena.value,
+    VoiceOption.Tetiana.value: Voices.Tetiana.value,
     VoiceOption.Mykyta.value: Voices.Mykyta.value,
     VoiceOption.Lada.value: Voices.Lada.value,
     VoiceOption.Dmytro.value: Voices.Dmytro.value,
-    VoiceOption.Olga.value: Voices.Olga.value,
 }
 
 
