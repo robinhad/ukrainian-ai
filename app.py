@@ -58,7 +58,7 @@ iface = gr.Interface(
         gr.components.Radio(
             label="Голос",
             choices=[option.value for option in VoiceOption],
-            value=VoiceOption.Olena.value,
+            value=VoiceOption.Tetiana.value,
         ),
         "state"],
     outputs=[
